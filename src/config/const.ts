@@ -1,0 +1,1 @@
+export const ENV = {ChaveAPI:process.env.REACT_APP_CHAVE_API}

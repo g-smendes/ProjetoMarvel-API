@@ -1,46 +1,93 @@
-# Getting Started with Create React App
+<h1 align="center">
+ <img alt="move.it" title="move.it" src="https://user-images.githubusercontent.com/66326378/164896001-b6c44ec6-8f76-4193-91c6-75e0d408a05b.png" height=100px  />
+  <br>
+  Projeto: Marvel API
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-deploy-do-projeto">Deploy do Projeto</a>&nbsp;&nbsp;
+</p>
 
-## Available Scripts
+<br>
 
-In the project directory, you can run:
+<h2>🖥️ Tela principal: </h2>
+<p align="center">
+  <img alt="Happy" src="./tela/principal.png" width="100%">
+</p>
 
-### `npm start`
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## ✨ Tecnologias
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-### `npm test`
+- [ReactJS](https://reactjs.org)
+- [React Icons](https://react-icons.github.io/react-icons/search)
+- [TypeScript](https://www.typescriptlang.org)
+- [Axios](https://axios-http.com/docs/intro)
+- [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+- [Styled Components](https://styled-components.com)
+- [Marvel API](https://developer.marvel.com)
+- [md5](https://www.npmjs.com/package/md5)
+- [ESLint](https://eslint.org/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br>
 
-### `npm run build`
+## 💻 Projeto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p align="center">
+Esse projeto consiste em uma aplicação para mostrar os personagens, criadores, séries, quadrinhos e etc da Marvel, informações e curiosidades importantes sobre cada um.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+</p>
+ 
+<br> 
+ 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Como executar
 
-### `npm run eject`
+- Clone o repositório
+- Vá ao site da [Marvel](https://developer.marvel.com), crie sua conta e pegue suas chaves (pública e privada)
+- Instale o [NPM](https://www.npmjs.com)
+- Instale as dependências com `npm install` no terminal
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
+<br>
+<br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<h2>ATENÇÃO</h2>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Exemplo de como utilizar variáveis de ambiente no ReactJS:
 
-## Learn More
+1º Passo criar um arquivo `.env`, fica junto com os arquivos lá de fora Eslint e etc `.env` colocar:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+REACT_APP_CHAVE_API=chaveQueVcPegarDoSite
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2º Passo criar uma pasta dentro do `src` como `config` ou qualquer outro nome achar melhor, dentro dessa pasta `config`, criar uma arquivo exemplo PrivateAPI.ts, colocar seguinte code:
+
+export const ENV = {ChaveAPI:process.env.REACT_APP_CHAVE_API}
+
+Obs: nome dado no arquivo `.env` PrivateAPI, é o mesmo que ira utilizar no 
+export const ENV = {ChaveAPI:process.env.REACT_APP_CHAVE_API(`.env`)}. 
+
+3º Passo ir no arquivo `.gitgnore`, # misc e acressentar 
+
+.env ;
+
+esse arquivo é pessoal, não compartilhe com ninguem.
+
+4º Passo ir no arquivo que sua chave privada do API, retirar sua chave privada e inserir
+
+<h2>Antes</h2>
+
+const privateKey = (sua chave privada)
+
+<h2>Depois</h2>
+
+const privateKey = ENV.ChaveAPI || ' '
+
+---
+
+
